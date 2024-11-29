@@ -20,18 +20,21 @@ PIN via the web interface.  This is a read-only utility.
 TOTP entries which require touch are not supported and will be filtered from
 the results.  This utility returns all keys on the device.
 
-Requires Yubikey Manager CLI (`ykman`)
+Requires [Yubikey Manager CLI](https://github.com/Yubico/yubikey-manager).
 
 # Installation
 
-Connect a Yubikey TOTP device to a USB port on the host.  Ensure the
-Yubikey Manager `ykman` package is installed and executable by your web
-server.
+Connect a Yubikey TOTP device to a USB port on the host.  Ensure the Yubikey
+Manager `ykman` application is installed and executable by your web server.
 
 Clone this Github project into a content folder on your web server.
 
 Refer to your web server and firewall documentation for guidance on securing
 the installation.
+
+It may be necessary to grant your web server permissions to access the Yubikey
+Manager application.  Ubuntu users may need to implement the fixes [here][1]
+and [here][2].
 
 # Usage
 
@@ -46,3 +49,7 @@ The user assumes all risks associated with the installation of this utility.
 
 This project is not associated with Yubico, manufacturers of the Yubikey
 security devices and developer of the Yubikey Manager application.
+
+
+[1]: https://github.com/Yubico/yubikey-manager/issues/630#issuecomment-2319051815
+[2]: https://github.com/Yubico/yubikey-manager/issues/630#issuecomment-2476838966
