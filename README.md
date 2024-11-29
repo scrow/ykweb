@@ -55,6 +55,18 @@ It may be necessary to grant your web server permissions to access the Yubikey
 Manager application.  Ubuntu users may need to implement the fixes [here][1]
 and [here][2].
 
+# Configuration
+
+Copy the included `config.inc.php.sample` to `config.inc.php` and modify it
+to suit your preferences with respect to activity logging.  Activity can be
+logged to the file of your choice, and if desired, users can be permitted to
+access the last 25 lines of the log file after authenticating to the Yubikey.
+
+For purposes of logging, two authentication types are available: HTTP Basic
+and Cloudflare Zero Trust Access.  The Cloudflare option is for `ykweb`
+instances placed behind a [Cloudflare Zero Trust application][3].
+
+
 # Usage
 
 To retrieve TOTP codes, simply access the URL corresponding to the content
@@ -72,3 +84,4 @@ security devices and developer of the Yubikey Manager application.
 
 [1]: https://github.com/Yubico/yubikey-manager/issues/630#issuecomment-2319051815
 [2]: https://github.com/Yubico/yubikey-manager/issues/630#issuecomment-2476838966
+[3]: https://developers.cloudflare.com/cloudflare-one/applications/

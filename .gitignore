@@ -1,1 +1,5 @@
 logo.png
+.htaccess
+.htpasswd
+*.log
+config.inc.php
